@@ -7,7 +7,6 @@
         <title>Blurred Console.</title>
 
         <link rel="stylesheet" href="blurred.css">
-        <link rel="icon" type="image/x-icon" href="images/tairo.png">
 
         <!-- css libs -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -27,7 +26,7 @@
             <aside class="blurred-aside">
                 <div class="aside-container">
                     <div class="container-avatar">
-                        <img alt="logo" src="images/tairo.png" class="blurred-avatar">
+                        <img alt="logo" src="images/logo.png" class="blurred-avatar">
                         <h3 class="aside-title"><strong>B</strong>lurred <strong>C</strong>onsole</h3>
                         <div class="blurred-social">
                             <a href="#" class="blurred-btn-social"><i class="bi-twitter"></i></a>
@@ -40,13 +39,13 @@
                 <div class="aside-main">
                     <div class="blurred-menubox">
                         <div class="blurred-menuitem">
-                            <a href="index.html" class="blurred-btn-menuitem">
+                            <a href="#" class="blurred-btn-menuitem">
                                 <i class="bi-house"></i>
                                 <span class="nav-label">Home</span>
                             </a>
                         </div>
                         <div class="blurred-menuitem">
-                            <a href="#" class="blurred-btn-menuitem" onclick="blurredconsole()">
+                            <a href="aboutus.html" class="blurred-btn-menuitem">
                                 <i class="bi-person"></i>
                                 <span class="nav-label">About us</span>
                             </a>
@@ -77,6 +76,9 @@
                         </div>
                     </div>
                 </div>
+                <button onclick="displayMenuDown()" class="blurred-menu">
+                    <i class="bi-x-lg">=</i>
+                </button>
                 <div class="blurred-master">
                     <p class="blurred-master-info">
                         <code><</code>
@@ -94,9 +96,56 @@
                     <strong class="blurred-b">B</strong>lurred 
                     <strong class="blurred-c">C</strong>onsole
                 </h1>
-                <p class="blurred-msg">Instant developers. 
+                <p id="console-msg" class="blurred-msg">Instant developers. 
                     <span>*Site</span>
-                </p>
+                </p><info id="console-typer" class="blurred-typer">|</info>
+                <div class="team">
+                    <div class="team-card" onmouseover="blurred()">
+                      <div class="team-card-top">
+                        <div class="team-card-image">
+                            <img src="images/avatar.jpg" alt="avatar">
+                        </div>
+                      </div>
+                      <div class="team-card-bottom">
+                        <div class="team-card-name">
+                          Aman Tairo
+                        </div>
+                        <div class="team-card-position">
+                          Front-end developer
+                        </div>
+                      </div>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-card-top">
+                          <div class="team-card-image">
+                              <img src="images/avatar.jpg" alt="avatar">
+                          </div>
+                        </div>
+                        <div class="team-card-bottom">
+                          <div class="team-card-name">
+                            Salum Almas
+                          </div>
+                          <div class="team-card-position">
+                            Sponsor
+                          </div>
+                        </div>
+                      </div>
+                      <div class="team-card">
+                      <div class="team-card-top">
+                        <div class="team-card-image">
+                          <img src="images/avatar.jpg" alt="avatar">
+                        </div>
+                      </div>
+                      <div class="team-card-bottom">
+                        <div class="team-card-name">
+                         Roberth Sayula
+                        </div>
+                        <div class="team-card-position">
+                          UX/UI designer
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 <button onclick="displayMenu()" class="blurred-display">
                     <i class="bi-x-lg">x</i>
                 </button>

@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en-US">
+    <head>
+
+        <meta charset="utf-8">
+        <meta content='width=device-width, initial-scale=1' name="viewport" >
+        <title>Blurred Console.</title>
+
+        <link rel="stylesheet" href="blurred.css">
+
+        <!-- css libs -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+        
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    
+    </head>
+    <body>
+        <!-- Container -->
+        <div class="blurred-sticker">
+
+            <!-- aside -->
+            <aside class="blurred-aside">
+                <div class="aside-container">
+                    <div class="container-avatar">
+                        <img alt="logo" src="images/logo.png" class="blurred-avatar">
+                        <h3 class="aside-title"><strong>B</strong>lurred <strong>C</strong>onsole</h3>
+                        <div class="blurred-social">
+                            <a href="#" class="blurred-btn-social"><i class="bi-twitter"></i></a>
+                            <a href="#" class="blurred-btn-social"><i class="bi-linkedin"></i></a>
+                            <a href="#" class="blurred-btn-social"><i class="bi-instagram"></i></a>
+                            <a href="#" class="blurred-btn-social"><i class="bi-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="aside-main">
+                    <div class="blurred-menubox">
+                        <div class="blurred-menuitem">
+                            <a href="index.html" class="blurred-btn-menuitem">
+                                <i class="bi-house"></i>
+                                <span class="nav-label">Home</span>
+                            </a>
+                        </div>
+                        <div class="blurred-menuitem">
+                            <a href="#" class="blurred-btn-menuitem">
+                                <i class="bi-person"></i>
+                                <span class="nav-label">About us</span>
+                            </a>
+                        </div>
+                        <div class="blurred-menuitem">
+                            <a href="#" class="blurred-btn-menuitem" onclick="blurredconsole()">
+                                <i class="bi-file"></i>
+                                <span class="nav-label">Our Resume</span>
+                            </a>
+                        </div>
+                        <div class="blurred-menuitem">
+                            <a href="#" class="blurred-btn-menuitem" onclick="blurredconsole()">
+                                <i class="bi-book"></i>
+                                <span class="nav-label">Portfolios</span>
+                            </a>
+                        </div>
+                        <div class="blurred-menuitem">
+                            <a href="#" class="blurred-btn-menuitem" onclick="blurredconsole()">
+                                <i class="bi-server"></i>
+                                <span class="nav-label">Services</span>
+                            </a>
+                        </div>
+                        <div class="blurred-menuitem">
+                            <a href="#" class="blurred-btn-menuitem" onclick="blurredconsole()">
+                                <i class="bi-envelope"></i>
+                                <span class="nav-label">Contacts</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="displayMenuDown()" class="blurred-menu">
+                    <i class="bi-x-lg">=</i>
+                </button>
+                <div class="blurred-master">
+                    <p class="blurred-master-info">
+                        <code><</code>
+                        <strong>@Tairo Cruiz</strong>
+                        <code>></code>
+                    </p>
+                    
+                </div>
+                
+            </aside>
+            <!-- /aside -->
+
+            <!-- main -->
+            <main class="container-main">
+                <div class="blurred-filter"></div>
+                <div class="blurred-card">
+                    <div class="blurred-content" translate="yes">
+                        <h2 class="blurred-card-title">Blurred Console</h2>
+                        <info class="blurred-content paragraph">
+                            <p>
+                                The blurred console is a site where juniors developers can 
+                                access materials, information, source code and documentation of small projects.
+                                It organises students and developers from different Universities and 
+                                Companies, so that they can share | exchange techniques, experience and knowledge.
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Nisi similique amet sed tempora. Libero architecto omnis perspiciatis obcaecati 
+                                iure quibusdam placeat odit, tempora ut dolores natus officia incidunt nulla quos?
+                            </p>
+                            <fieldset class="blurred-field">
+                                <h6>Team members :</h6><br />
+                                <ul class="blurred-fieldlist">
+                                    <li><a id="console-confirm" href="#" onmouseover="consoleConfirm()">Aman Tairo</a> </li>
+                                    <li><a href="#">Roberth Sayula</a></li>
+                                    <li> <a href="#">Salum Lubuva</a></li>
+                                </ul>
+                            </fieldset>
+                            
+                        </info>
+                    </div>
+                </div>
+                <time id="console-time" class="blurred-time" onload="blurred_Console()"></time>
+                <button onclick="displayMenu()" class="blurred-display">
+                    <i class="bi-x-lg">x</i>
+                </button>
+            </main>
+            <!-- /main -->
+        </div>
+        <!-- /Container -->
+
+        <!-- scripts -->
+        <script src="blurred.js"></script>
+        <!-- /scripts -->
+    </body>
+</html>

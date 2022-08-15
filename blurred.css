@@ -1,3 +1,10 @@
+
+/**
+ * @author Aman Tairo.
+ * @package Blurred Console
+ * @version 0.0.1
+ */`
+
 *{
     font-family: 'Raleway', sans-serif;
     padding: 0;
@@ -30,6 +37,7 @@
 
 html, body {
     height: 100%;
+    background-color: rgb(3, 8, 18) !important;
 }
 div {
     display: block;
@@ -49,6 +57,10 @@ a {
 a:-webkit-any-link {
     cursor: -webkit-grabbing;
 }
+img {
+    vertical-align: middle;
+    border-style: none;
+}
 
 .blurred-sticker {
     width: 100%;
@@ -56,8 +68,8 @@ a:-webkit-any-link {
 }
 .blurred-aside {
     width: 20%;
-    max-width: 300px;
-    min-width: 300px;
+    max-width: 20%;
+    min-width: 20%;
     height: 100%;
     position: fixed;
     left: 0;
@@ -185,6 +197,11 @@ a:-webkit-any-link {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    animation-name: blurredbounce;
+    animation-duration: 1600ms;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    visibility: visible;
 }
 .blurred-master-info {
     font-family: var(--blurred-fonttwo);
@@ -192,7 +209,18 @@ a:-webkit-any-link {
     font-weight: 400;
     color: var(--blurred-info);
 }
-
+.blurred-master time {
+    animation: none !important;
+}
+.blurred-time {
+    color: var(--blurred-white) !important;
+    font-weight: bolder;
+    font-size: larger;
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    z-index: 3;
+}
 .container-main {
     width: 100%;
     height: 100%;
@@ -258,6 +286,106 @@ a:-webkit-any-link {
 .displayMenu {
     left: 0 !important;
 }
+.displayMenuDown {
+    left: 0 !important;
+}
+.blurred-field{
+    float: left;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    margin-top: 2%;
+    margin-left: 3%;
+    border: none;
+    display: block;
+    width: 60%;
+    
+}
+.blurred-field h6 {
+    float: inherit;
+    border-bottom: 2px solid var(--blurred-aqua);
+}
+
+.blurred-field ul li,  .blurred-field ul li a{
+    text-decoration: none;
+    border: none;
+    display: flex;
+    color: inherit;
+    padding-left: 5px;
+    /*
+    flex-direction: r;
+    align-items: flex-start;*/
+
+}
+.blurred-fieldlist {
+    display: unset;
+
+}
+.blurred-card-title {
+    align-items: center;
+    text-align: center;
+} 
+.blurred-card {
+    animation-name: blurredmation;
+    animation-duration: 1500ms;
+    animation-fill-mode: both;
+    visibility: visible;
+    background: linear-gradient(to left, #8215a087 34%, #140b46b6 64%);
+    width: 70%;
+    height: 90%;
+    margin-left: 25%;
+    z-index: 4;
+    border-radius: 5px;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 9px 2px #0a071bb6;
+}
+.blurred-card:hover {
+    background: linear-gradient(to left, #8215a0af 34%, #140b46c5 64%);
+    box-shadow: 0px 1px 9px 2px #5fdaff98;
+    transition: box-shadow 0.5s;
+    transition: top 0.6s;
+    transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.blurred-content {
+    width: 100%;
+    
+    height: inherit;
+    padding: 8px;
+    color: var(--blurred-white);
+    text-align: center;
+}
+.blurred-content info {
+    text-align: center;
+    text-shadow: -3px 4px 8px #1fb3ed;
+}
+.my-card {
+    margin-left: 30% !important;
+    z-index: 4;
+    background-color: #253042 !important;
+}
+.img-circle {
+    border-radius: 50%;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+.blurred-menu {
+    display: none;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    z-index: 5;
+    border: none;
+    font-family: var(--blurred-fonttwo);
+    font-size: var(--blurred-fontmd);
+    background-color: var(--blurred-info);
+    color: var(--blurred-white);
+    cursor: pointer;
+}
 
 @media screen and (max-width: 1200px) {
     .blurred-aside {
@@ -271,16 +399,269 @@ a:-webkit-any-link {
     .blurred-title .blurred-msg {
         margin-left: 10vw;
     }
+
+    .blurred-aside {
+        width: inherit;
+    }
 }
 
 @media screen and (max-width: 768px) {
     .blurred-title{
         font-size: 28px;
     }
-}
 
-@media screen and (max-height: 720px) {
-    .aside-main{
+    .my-card {
+        margin-left: 30% !important;
+    }
+    .team {
+        margin-left: 28% !important;
+    }
+    .team-card {    
+        height: 42% !important;
+        width: 42% !important;
+    }
+    .team-card-top {
+        width: 100% !important;
+        height: 62% !important;
+    }
+    .team-card:hover {
+        height: 100px;
+    }
+    .team-card:hover .team-card-image {
+        border: 1px solid var(--blurred-aqua) !important;
+      }
+    .team-card-name {
+        font-size: 11px !important;
+    }
+    .team-card-position {
+        color: var(--blurred-red) !important;
+    }
+    .blurred-aside {
+        width: 20%;
+        max-width: 25%;
+        min-width: 25%;
+    }
+    .blurred-menubox {
+        width: 100%;
         display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 10%;
+    }
+    .blurred-menuitem {
+        margin: 7px 0;
+    }
+    .blurred-btn-menuitem {
+        font-size: 10px !important;
+    }
+    .blurred-master-info {
+        font-family: var(--blurred-fonttwo);
+        font-size: 7px !important;
+        font-weight: 400;
+        color: var(--blurred-info);
+    }
+    .col-sm-6, .col-12 {
+        flex: 0 0 auto !important;
+        width: 50% !important;
+        font-size: 9px !important;
+    }
+    .aside-title {
+        font-size: 9px !important;
+    }
+
+    .blurred-avatar {
+        width: 50%;
+        height: auto;
+        border: 2px solid #1fb3ed;
     }
 }
+
+@media screen and (max-height: 520px) {
+    .aside-main, .blurred-menubox {
+        width: 100%;
+        margin: 20px 0;
+    }
+    
+    .blurred-menubox {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 15%;
+    }
+    .blurred-menuitem {
+        margin: 6% 0;
+    }
+    
+    .blurred-btn-menuitem {
+     transition: color .5s;
+     color: var(--blurred-jivu);
+     font-size: var(--blurred-fontsm);
+     font-weight: 400;
+    }
+}
+
+@keyframes blurredmation {
+    0% {
+        transform: none;
+      }
+    
+      15% {
+        transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+      }
+    
+      30% {
+        transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+      }
+    
+      45% {
+        transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+      }
+    
+      60% {
+        transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+      }
+    
+      75% {
+        transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+      }
+    
+      100% {
+        transform: none;
+      }
+}
+@keyframes blurredbounce {
+    0% {
+        transform: none;
+    }
+    10% {
+        transform: rotateZ(36deg);
+        transform: rotateY(36deg);
+    }
+    20% {   
+        transform: rotateZ(72deg);
+        transform: rotateY(72deg);
+    }
+    30% {
+        transform: rotateZ(108deg);
+        transform: rotateY(108deg);
+    }
+    40% {
+        transform: rotateZ(144deg);
+        transform: rotateY(144deg);
+    }
+    50% {
+        transform: rotateZ(180deg);
+        transform: rotateY(180deg);
+    }
+    60% {
+        transform: rotateZ(216deg);
+        transform: rotateY(216deg);
+    }
+    70% {
+        transform: rotateZ(252deg);
+        transform: rotateY(252deg);
+    }
+    80% {
+        transform: rotateZ(288deg);
+        transform: rotateY(288deg);
+    }
+    90% {   
+        transform: rotateZ(324deg);
+        transform: rotateY(324deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+        transform: rotateY(360deg);
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+.team {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    z-index: 4;
+    margin-left: 32%;
+  }
+  .team-card {
+    position: relative;
+    height: 130px;
+    width: 130px;
+    border-radius: 30px;
+    background: linear-gradient(45deg, #72236c 0%, #66a2e7 100%);
+    transition: 0.3s ease-out;
+    overflow: hidden;
+    box-shadow: #11111a1a 0px 0px 16px;
+  }
+  .team-card:hover {
+    height: 200px;
+  }
+  .team-card-top {
+    height: 130px;
+    width: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .team-card-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 70%;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: auto;
+    transition: 0.3s ease-out;
+    border: 7px solid transparent;
+  }
+  .team-card:hover .team-card-image {
+    border: 7px solid var(--blurred-aqua);
+  }
+  .team-card-image img {
+    transition: 0.3s ease-out;
+    height: 100%; /*if the image is rectangular use height: 100%;*/
+    /*if the image is square replace height: 100%; by width: 100%;*/
+  }
+  .team-card:hover img {
+    height: 110%;
+  }
+  .team-card-bottom {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    height: 80px;
+    background: #0d0923;
+    position: absolute;
+    bottom: -80px;
+    opacity: 0;
+    transition: 0.3s ease-out;
+  }
+  .team-card:hover .team-card-bottom {
+    bottom: 0;
+    opacity: 1;
+  }
+  .team-card-name {
+    font-family: 'Lobster', cursive;
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #5fdaff;
+  }
+  .team-card-position {
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    color: #5fdaff;
+  }
