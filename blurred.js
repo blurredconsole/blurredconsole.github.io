@@ -45,6 +45,26 @@ var str = "We are developers willing to change the world."
 var splitstr = str.split(''), timeInterval = 100, i = 0;
 let msg = document.getElementById('console-msg');
 
+
+
+function blurredVib() {
+  let toggle = document.querySelector('.blurred-input');
+  toggle.classList.add('blurred-vib');
+}
+let guf = document.getElementById('console-time');
+guf.appendChild(document.createElement('div'));
+function timing(){
+    var datetime = new Date();
+    var hrs = datetime.getHours();
+    var mins = datetime.getMinutes();
+    var secs = datetime.getSeconds();
+    var fulltime = (hrs + ':' + mins + ':' + secs);
+    //console.log(fulltime);
+    guf.innerHTML = fulltime;
+}
+console.log(timing);
+setInterval(timing, 10);
+
 function type(){
   if(i<splitstr.length){
     msg.append(splitstr[i]);
@@ -57,8 +77,8 @@ function type(){
   }
 }
 
-type();
 
+type();
 
 /*    ################################################################################################    */
 

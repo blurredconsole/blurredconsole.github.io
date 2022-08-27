@@ -3,7 +3,7 @@
  * @author Aman Tairo.
  * @package Blurred Console
  * @version 0.0.1
- */`
+ */
 
 *{
     font-family: 'Raleway', sans-serif;
@@ -387,6 +387,22 @@ img {
     cursor: pointer;
 }
 
+.blurred-input-group [required] {
+    width: 65%;
+    padding: 7px;
+    background: none;
+    color: var(--blurred-white);
+    border: none;
+    border-bottom: 2px solid var(--blurred-aqua);
+    border-radius: 1px 5px 70px 1px;
+    
+    text-align: center;
+}
+
+.blurred-vib {
+    box-shadow: -1px 1px aliceblue;
+}
+
 @media screen and (max-width: 1200px) {
     .blurred-aside {
         left: -500px;
@@ -476,12 +492,48 @@ img {
     }
 }
 
+@media screen and (max-width: 520px) {
+    .aside-main, .blurred-menubox {
+        width: 100%;
+        margin: 20px 0;
+    }
+    .paragraph {
+        font-size: 8px !important;
+    }
+    .blurred-btn-social {
+        size: 6%;
+        padding: 1px 2px;
+        margin: 0 1px;
+    }
+    .container-main {
+        background-image: cover;
+    }
+    .blurred-menubox {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 15%;
+    }
+    .blurred-menuitem {
+        margin: 6% 0;
+    }
+    
+    .blurred-btn-menuitem {
+     transition: color .5s;
+     color: var(--blurred-jivu);
+     font-size: var(--blurred-fontsm);
+     font-weight: 400;
+    }
+}
 @media screen and (max-height: 520px) {
     .aside-main, .blurred-menubox {
         width: 100%;
         margin: 20px 0;
     }
-    
+    .container-main {
+        background-image: cover;
+    }
     .blurred-menubox {
         width: 100%;
         display: flex;
